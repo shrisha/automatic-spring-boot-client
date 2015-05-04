@@ -58,15 +58,17 @@
                     <th>start loc</th>
                     <th>end time</th>
                     <th>end loc</th>
-                    <th>distance</th>
+                    <th>distance(m)</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr th:each="trip : ${trips}">
                     <td th:text="${trip.id}"></td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
+                    <td th:text="${trip.startTime}"></td>
+                    <td th:text="${trip.startLocation.displayName}"></td>
+                    <td th:text="${trip.endTime}"></td>
+                    <td th:text="${trip.endLocation.displayName}"></td>
+                    <td th:text="${trip.distanceM}"></td>
                 </tr>
                 </tbody>
             </table>
