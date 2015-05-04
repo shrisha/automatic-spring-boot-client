@@ -1,0 +1,11 @@
+server:
+     port: 3000
+
+automatic:
+  clientId: clientIdGoesHere
+  clientSecret: clientSecretGoesHere
+  authorizeUrl: https://accounts.automatic.com/oauth/authorize
+  accessTokenUrl: https://accounts.automatic.com/oauth/access_token
+
+spring.template:
+  cache: false
