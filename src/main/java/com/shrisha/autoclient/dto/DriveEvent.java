@@ -37,9 +37,9 @@ public class DriveEvent {
     @JsonProperty("end_distance_m")
     private Double endDistanceM;
     @JsonProperty("start_time")
-    private Integer startTime;
+    private Long startTime;
     @JsonProperty("end_time")
-    private Integer endTime;
+    private Long endTime;
     @JsonProperty("velocity_mph")
     private Integer velocityMph;
     @JsonProperty("lat")
@@ -47,7 +47,7 @@ public class DriveEvent {
     @JsonProperty("lon")
     private Double lon;
     @JsonProperty("ts")
-    private Integer ts;
+    private Long ts;
     @JsonProperty("g")
     private Double g;
     @JsonIgnore
@@ -119,7 +119,7 @@ public class DriveEvent {
      *     The startTime
      */
     @JsonProperty("start_time")
-    public Integer getStartTime() {
+    public Long getStartTime() {
         return startTime;
     }
 
@@ -129,7 +129,7 @@ public class DriveEvent {
      *     The start_time
      */
     @JsonProperty("start_time")
-    public void setStartTime(Integer startTime) {
+    public void setStartTime(Long startTime) {
         this.startTime = startTime;
     }
 
@@ -139,7 +139,7 @@ public class DriveEvent {
      *     The endTime
      */
     @JsonProperty("end_time")
-    public Integer getEndTime() {
+    public Long getEndTime() {
         return endTime;
     }
 
@@ -149,7 +149,7 @@ public class DriveEvent {
      *     The end_time
      */
     @JsonProperty("end_time")
-    public void setEndTime(Integer endTime) {
+    public void setEndTime(Long endTime) {
         this.endTime = endTime;
     }
 
@@ -219,7 +219,7 @@ public class DriveEvent {
      *     The ts
      */
     @JsonProperty("ts")
-    public Integer getTs() {
+    public Long getTs() {
         return ts;
     }
 
@@ -229,7 +229,7 @@ public class DriveEvent {
      *     The ts
      */
     @JsonProperty("ts")
-    public void setTs(Integer ts) {
+    public void setTs(Long ts) {
         this.ts = ts;
     }
 

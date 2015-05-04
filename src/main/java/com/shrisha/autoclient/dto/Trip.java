@@ -54,13 +54,13 @@ public class Trip {
     @JsonProperty("start_location")
     private StartLocation startLocation;
     @JsonProperty("start_time")
-    private Integer startTime;
+    private Long startTime;
     @JsonProperty("start_time_zone")
     private String startTimeZone;
     @JsonProperty("end_location")
     private EndLocation endLocation;
     @JsonProperty("end_time")
-    private Integer endTime;
+    private Long endTime;
     @JsonProperty("end_time_zone")
     private String endTimeZone;
     @JsonProperty("path")
@@ -68,15 +68,15 @@ public class Trip {
     @JsonProperty("distance_m")
     private Double distanceM;
     @JsonProperty("hard_accels")
-    private Integer hardAccels;
+    private Long hardAccels;
     @JsonProperty("hard_brakes")
-    private Integer hardBrakes;
+    private Long hardBrakes;
     @JsonProperty("duration_over_80_s")
-    private Integer durationOver80S;
+    private Long durationOver80S;
     @JsonProperty("duration_over_75_s")
-    private Integer durationOver75S;
+    private Long durationOver75S;
     @JsonProperty("duration_over_70_s")
-    private Integer durationOver70S;
+    private Long durationOver70S;
     @JsonProperty("fuel_cost_usd")
     private Double fuelCostUsd;
     @JsonProperty("fuel_volume_gal")
@@ -194,7 +194,7 @@ public class Trip {
      *     The startTime
      */
     @JsonProperty("start_time")
-    public Integer getStartTime() {
+    public Long getStartTime() {
         return startTime;
     }
 
@@ -204,7 +204,7 @@ public class Trip {
      *     The start_time
      */
     @JsonProperty("start_time")
-    public void setStartTime(Integer startTime) {
+    public void setStartTime(Long startTime) {
         this.startTime = startTime;
     }
 
@@ -254,7 +254,7 @@ public class Trip {
      *     The endTime
      */
     @JsonProperty("end_time")
-    public Integer getEndTime() {
+    public Long getEndTime() {
         return endTime;
     }
 
@@ -264,7 +264,7 @@ public class Trip {
      *     The end_time
      */
     @JsonProperty("end_time")
-    public void setEndTime(Integer endTime) {
+    public void setEndTime(Long endTime) {
         this.endTime = endTime;
     }
 
@@ -334,7 +334,7 @@ public class Trip {
      *     The hardAccels
      */
     @JsonProperty("hard_accels")
-    public Integer getHardAccels() {
+    public Long getHardAccels() {
         return hardAccels;
     }
 
@@ -344,7 +344,7 @@ public class Trip {
      *     The hard_accels
      */
     @JsonProperty("hard_accels")
-    public void setHardAccels(Integer hardAccels) {
+    public void setHardAccels(Long hardAccels) {
         this.hardAccels = hardAccels;
     }
 
@@ -354,7 +354,7 @@ public class Trip {
      *     The hardBrakes
      */
     @JsonProperty("hard_brakes")
-    public Integer getHardBrakes() {
+    public Long getHardBrakes() {
         return hardBrakes;
     }
 
@@ -364,7 +364,7 @@ public class Trip {
      *     The hard_brakes
      */
     @JsonProperty("hard_brakes")
-    public void setHardBrakes(Integer hardBrakes) {
+    public void setHardBrakes(Long hardBrakes) {
         this.hardBrakes = hardBrakes;
     }
 
@@ -374,7 +374,7 @@ public class Trip {
      *     The durationOver80S
      */
     @JsonProperty("duration_over_80_s")
-    public Integer getDurationOver80S() {
+    public Long getDurationOver80S() {
         return durationOver80S;
     }
 
@@ -384,7 +384,7 @@ public class Trip {
      *     The duration_over_80_s
      */
     @JsonProperty("duration_over_80_s")
-    public void setDurationOver80S(Integer durationOver80S) {
+    public void setDurationOver80S(Long durationOver80S) {
         this.durationOver80S = durationOver80S;
     }
 
@@ -394,7 +394,7 @@ public class Trip {
      *     The durationOver75S
      */
     @JsonProperty("duration_over_75_s")
-    public Integer getDurationOver75S() {
+    public Long getDurationOver75S() {
         return durationOver75S;
     }
 
@@ -404,7 +404,7 @@ public class Trip {
      *     The duration_over_75_s
      */
     @JsonProperty("duration_over_75_s")
-    public void setDurationOver75S(Integer durationOver75S) {
+    public void setDurationOver75S(Long durationOver75S) {
         this.durationOver75S = durationOver75S;
     }
 
@@ -414,7 +414,7 @@ public class Trip {
      *     The durationOver70S
      */
     @JsonProperty("duration_over_70_s")
-    public Integer getDurationOver70S() {
+    public Long getDurationOver70S() {
         return durationOver70S;
     }
 
@@ -424,7 +424,7 @@ public class Trip {
      *     The duration_over_70_s
      */
     @JsonProperty("duration_over_70_s")
-    public void setDurationOver70S(Integer durationOver70S) {
+    public void setDurationOver70S(Long durationOver70S) {
         this.durationOver70S = durationOver70S;
     }
 

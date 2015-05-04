@@ -5,14 +5,19 @@ package com.shrisha.autoclient.web;
  */
 
 
+import com.shrisha.autoclient.dto.Trip;
 import com.shrisha.autoclient.dto.TripsResponse;
 import com.shrisha.autoclient.service.AutomaticService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import java.util.List;
 
 @Controller
 public class MainController {
@@ -27,7 +32,10 @@ public class MainController {
 
     @RequestMapping(value = "/automatic/trips", method = RequestMethod.GET)
     public String trips(Model model) {
-        TripsResponse tripsResponse = automaticService.getTrips();
+        ResponseEntity<Trip[]> tripsResponse = automaticService.getTrips();
+        if(tripsResponse.getStatusCode()== HttpStatus.OK){
+            model.addAttribute("trips",tripsResponse.getBody());
+        }
         return "trips";
     }
 

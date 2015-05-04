@@ -2,6 +2,7 @@ package com.shrisha.autoclient.service;
 
 import com.shrisha.autoclient.dto.Trip;
 import com.shrisha.autoclient.dto.TripsResponse;
+import org.springframework.http.ResponseEntity;
 
 import java.util.List;
 
@@ -10,5 +11,5 @@ import java.util.List;
  */
 public interface AutomaticService {
 
-    TripsResponse getTrips();
+    ResponseEntity<Trip[]>  getTrips();
 }
