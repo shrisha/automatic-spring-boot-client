@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 import org.springframework.context.annotation.ScopedProxyMode;
+import org.springframework.core.env.Environment;
 import org.springframework.security.oauth2.client.DefaultOAuth2ClientContext;
 import org.springframework.security.oauth2.client.DefaultOAuth2RequestAuthenticator;
 import org.springframework.security.oauth2.client.OAuth2ClientContext;
@@ -29,6 +30,9 @@ import java.util.Arrays;
 @EnableOAuth2Client
 public class OAuth2ClientConfig {
 
+    @Autowired
+    Environment environment;
+
     @Value("${automatic.accessTokenUrl}")
     private String accessTokenUri;
 
@@ -45,7 +49,11 @@ public class OAuth2ClientConfig {
     public OAuth2ProtectedResourceDetails automaticOAuth2Details() {
         AuthorizationCodeResourceDetails details = new AuthorizationCodeResourceDetails();
         details.setId("automatic");
+        if(clientId.equals("clientIdGoesHere"))
+            clientId= environment.getProperty("automatic.clientId");
         details.setClientId(clientId);
+        if(clientId.equals("clientSecretGoesHere"))
+            clientId= environment.getProperty("automatic.clientSecret");
         details.setClientSecret(clientSecret);
         details.setAccessTokenUri(accessTokenUri);
         details.setUserAuthorizationUri(authorizeUrl);
