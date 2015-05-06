@@ -57,7 +57,7 @@ public class OAuth2ClientConfig {
         details.setClientSecret(clientSecret);
         details.setAccessTokenUri(accessTokenUri);
         details.setUserAuthorizationUri(authorizeUrl);
-        details.setScope(Arrays.asList("scope:user:profile", "scope:vehicle:events", "scope:behavior", "scope:vehicle:profile", "scope:trip", "scope:location", "scope:current_location"));
+        details.setScope(Arrays.asList("scope:user:profile", "scope:vehicle:events", "scope:behavior", "scope:vehicle:profile", "scope:trip", "scope:location"));
         details.setUseCurrentUri(false);
         details.setClientAuthenticationScheme(AuthenticationScheme.form);
         return details;
